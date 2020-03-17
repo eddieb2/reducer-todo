@@ -29,10 +29,10 @@ In this project, you build an app that let's you display a todo list from reduce
 
 Follow these steps for completing your project.
 
-- [ ] Submit a Pull-Request to merge <firstName-lastName> Branch into master (student's Repository). **Please don't merge your own pull request**
-- [ ] Add your team lead as a reviewer on the pull-request
-- [ ] Your team lead will count the project as complete by merging the branch back into master.
-- [ ] Do your magic!
+- [x] Submit a Pull-Request to merge <firstName-lastName> Branch into master (student's Repository). **Please don't merge your own pull request**
+- [x] Add your team lead as a reviewer on the pull-request
+- [x] Your team lead will count the project as complete by merging the branch back into master.
+- [x] Do your magic!
 
 ## Minimum Viable Product
 
@@ -43,8 +43,8 @@ Follow these steps for completing your project.
 
 ### STEP 1 - Build a simple reducer and initial state
 
-- In a folder called `reducers` add a reducer file and build out a simple reducer with just a default return for now
-- In the same file, build your initial state object that has a list of todos with the following shape:
+- [x]  In a folder called `reducers` add a reducer file and build out a simple reducer with just a default return for now
+- [x]  In the same file, build your initial state object that has a list of todos with the following shape:
 
 ```js
 {
@@ -54,7 +54,7 @@ Follow these steps for completing your project.
 }
 ```
 
-- Export both the reducer and the initial state object
+- [x]  Export both the reducer and the initial state object
 
 ### STEP 2 - Set up state in your component
 
