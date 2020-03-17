@@ -19,16 +19,27 @@ const useStyles = makeStyles(theme => ({
 }));
 
 //ANCHOR COMPONENT HERE //
-const TodoForm = () => {
+const TodoForm = props => {
   const classes = useStyles();
 
   return (
-    <FormWrapper className={classes.root}>
+    <FormWrapper
+      className={classes.root}
+      onSubmit={e => {
+        e.preventDefault();
+        props.dispatch({ type: "ADD", payload: props.task });
+      }}
+    >
       <TextField
+        value={props.task}
         name="task"
         id="task"
         type="text"
         variant="outlined"
+        onChange={e => {
+          props.setTask(e.target.value);
+          // console.log(e.target.value);
+        }}
       />
       <Button type="submit" variant="outlined" color="secondary">
         Add Task
