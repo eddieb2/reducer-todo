@@ -18,6 +18,19 @@ export const todoReducer = (state, action) => {
           id: Date.now()
         }
       ];
+    case "TOGGLE":
+      return state.map(todo =>
+        todo.id === action.payload
+          ? { ...todo, completed: !todo.completed }
+          : todo
+      );
+    case "REMOVE":
+      let newArr = state.filter(item => {
+        return item.completed !== true;
+      });
+
+      return newArr;
+
     default:
       return state;
   }

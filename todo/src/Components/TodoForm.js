@@ -28,6 +28,7 @@ const TodoForm = props => {
       onSubmit={e => {
         e.preventDefault();
         props.dispatch({ type: "ADD", payload: props.task });
+        props.setTask("");
       }}
     >
       <TextField
@@ -41,8 +42,20 @@ const TodoForm = props => {
           // console.log(e.target.value);
         }}
       />
-      <Button type="submit" variant="outlined" color="secondary">
+      <Button type="submit" variant="outlined">
         Add Task
+      </Button>
+      <Button
+        variant="outlined"
+        color="secondary"
+        onClick={e => {
+          e.preventDefault();
+          props.dispatch({
+            type: "REMOVE"
+          });
+        }}
+      >
+        Clear
       </Button>
     </FormWrapper>
   );

@@ -15,7 +15,7 @@ const TodoList = props => {
       <TodoForm dispatch={dispatch} task={task} setTask={setTask} />
       <div>
         {state.map(task => (
-          <Todo task={task} key={task.id} />
+          <Todo task={task} key={task.id} dispatch={dispatch} />
         ))}
       </div>
     </div>
